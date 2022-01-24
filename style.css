@@ -1,0 +1,37 @@
+body {
+    background-color: #1d1d1d;
+}
+
+.button {
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 5px auto;
+    display: block;
+}
+
+#grid {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px gray solid;
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.grid-element {
+    flex: 1;
+    border: 1px gray solid;
+}
+
+.grid-element.active {
+    background-color: red;
+}
