@@ -1,9 +1,9 @@
-function createGrids() {
+function createGrids(gridSize) {
     const grid = document.getElementById("grid");
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < gridSize; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
-        for (let i = 0; i < 16; i++) {
+        for (let i = 0; i < gridSize; i++) {
             const gridElement = document.createElement("div");
             gridElement.classList.add("grid-element");
             row.appendChild(gridElement);
@@ -17,4 +17,13 @@ function hover() {
     this.classList.add("active");
 }
 
-createGrids();
+function clear(){
+    let gridSize = parseInt(prompt("Please enter the grid size, max size = 100", "16"));
+    if (gridSize > 100) { gridSize = 100 };
+    document.getElementById("grid").innerHTML = "";
+    createGrids(gridSize);
+}
+
+document.getElementById("clear-button").addEventListener("click", clear);
+
+createGrids(16);

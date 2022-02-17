@@ -2,7 +2,7 @@ body {
     background-color: #1d1d1d;
 }
 
-.button {
+#clear-button {
     background-color: gray;
     border: none;
     border-radius: 5px;
